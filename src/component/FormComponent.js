@@ -2,7 +2,7 @@ import React from "react";
 import { Form, Row, Col, Button } from "react-bootstrap";
 
 const FormComponent = ({
-  makanan,
+  nama,
   deskripsi,
   harga,
   id,
@@ -25,8 +25,8 @@ const FormComponent = ({
               <Form.Control
                 type="text"
                 placeholder="Nama makanan"
-                name="makanan"
-                value={makanan}
+                name="nama"
+                value={nama}
                 onChange={(event) => handleChange(event)}
               />
             </Form.Group>

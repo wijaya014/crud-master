@@ -6,9 +6,10 @@ import FormComponent from "./component/FormComponent";
 
 export default class App extends Component {
   constructor(props) {
-    super();
+    super(props);
     this.state = {
-      makanan: [],
+      makanans: [],
+      nama: "",
       deskripsi: "",
       harga: 0,
       id: 0,
@@ -19,20 +20,32 @@ export default class App extends Component {
       [event.target.name]: event.target.value,
     });
   };
+
   handleSubmit = (event) => {
     event.preventDefault();
-    console.log("halo");
+    this.setState({
+      makanans: [
+        ...this.state.makanans,
+        {
+          id: this.state.makanans.length + 1,
+          nama: this.state.nama,
+          deskripsi: this.state.deskripsi,
+          harga: this.state.harga,
+        },
+      ],
+    });
   };
+
   render() {
     return (
       <div>
         <Navbar />
         <div className="container mt-5">
-          <TableComponent />
+          <TableComponent makanans={this.state.makanans} />
           <FormComponent
             {...this.state}
-            onChange={this.handleChange}
-            onSubmit={this.handleSubmit}
+            handleChange={this.handleChange}
+            handleSubmit={this.handleSubmit}
           />
         </div>
       </div>
