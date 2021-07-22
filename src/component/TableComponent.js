@@ -7,9 +7,10 @@ const TableComponent = () => {
       <thead>
         <tr>
           <th>#</th>
-          <th>First Name</th>
-          <th>Last Name</th>
-          <th>Username</th>
+          <th>Nama makanan</th>
+          <th>Deskripsi</th>
+          <th>Harga</th>
+          <th>Aksi</th>
         </tr>
       </thead>
       <tbody>
@@ -18,6 +19,7 @@ const TableComponent = () => {
           <td>Mark</td>
           <td>Otto</td>
           <td>@mdo</td>
+          <td></td>
         </tr>
       </tbody>
     </Table>
