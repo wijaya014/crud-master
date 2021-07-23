@@ -76,6 +76,16 @@ export default class App extends Component {
     });
   };
 
+  handleHapusData = (id) => {
+    const dataYangAda = this.state.makanans
+      .filter((makanan) => makanan.id !== id)
+      .map((filter) => filter);
+
+    this.setState({
+      makanans: dataYangAda,
+    });
+  };
+
   render() {
     return (
       <div>
@@ -84,6 +94,7 @@ export default class App extends Component {
           <TableComponent
             makanans={this.state.makanans}
             handleEdit={this.handleEdit}
+            handleHapusData={this.handleHapusData}
           />
           <FormComponent
             {...this.state}
