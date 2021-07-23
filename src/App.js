@@ -34,6 +34,11 @@ export default class App extends Component {
         },
       ],
     });
+    this.setState({
+      nama: "",
+      deskripsi: "",
+      harga: 0,
+    });
   };
 
   render() {

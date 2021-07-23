@@ -17,7 +17,7 @@ const TableComponent = ({ makanans }) => {
         {makanans.map((makanan, index) => {
           return (
             <tr>
-              <td>{index}</td>
+              <td>{index + 1}</td>
               <td>{makanan.nama}</td>
               <td>{makanan.deskripsi}</td>
               <td>{makanan.harga}</td>
